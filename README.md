@@ -1,5 +1,5 @@
-# LOG-ANALYSIS PROJECT 428
-Log Analysis Project
+# LOGS--ANALYSIS PROJECT 428
+LOGS--Analysis Project
 Building an informative summary from logs by sql database queries. Interacting with a live database both from the command line and from the python code. This project is a part of the Udacity's Full Stack Web Developer Nanodegree.
 
 # Technologies used
