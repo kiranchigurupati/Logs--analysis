@@ -7,16 +7,27 @@ Building an informative summary from logs by sql database queries. Interacting w
 2.Writing Python code with DB-API
 3.Linux-based virtual machine (VM) Vagrant
 
-# Project Requirements
-Reporting tool should answer the following questions:
+# Project Description
+Getting Started
+Download this repositary.
 
-1.What are the  popular  articles of all time?
-2.Who are the popular authors of all time?
-3.On which log values more than 1% of requests lead to errors?
+Place newsdata.py file in shared vagrant folder.
 
--->Project follows good SQL coding practices: Each question should be answered with a single database query.
--->The code is error free and conforms to the PEP8 style recommendations.
--->The code presents its output in clearly formatted plain text.
+Power up vagrant by running 'vagrant up' in terminal that opened in the location of shared vagrant folder.
+
+Log into vagrant using the command 'vagrant ssh'.
+
+To set up database,cd into the vagrant directory and use the command psql -d news -f newsdata.sql.
+
+Run base1.py script using command 'python newsdata.py'.
+
+This will outputs the popular views, popular articles, errors from the database.
+
+# REFERENCE:
+PYTHON 3
+VITUALBOX VAGRANT
+
+
 
 # System setup and how to view this project
 This project makes use of Udacity's Linux-based virtual machine (VM) configuration which includes all of the necessary software to run the application.
