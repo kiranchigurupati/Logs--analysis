@@ -36,9 +36,4 @@ This project makes use of Udacity's Linux-based virtual machine (VM) configurati
 2.Download Virtual Box and install.
 3.Clone this repository to a directory of your choice.
 
-# Run these commands from the terminal in the folder where your vagrant is installed in:
-1.vagrant up to start up the VM.
-2.vagrant ssh to log into the VM.
-3.cd /vagrant to change to your vagrant directory.
-4.psql -d news -f newsdata.sql to load the data and create the tables.
-5.python newsdata.py to run the reporting tool.
+
