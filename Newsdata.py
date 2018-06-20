@@ -25,8 +25,8 @@ def tag_query(query):
         c.execute(query)
         q = c.fetchall()
         db.close()
-        for row in q:
-            print row
+        for title, views in results:
+            print results
         print "\n"
     except:
         print "connect to database."
