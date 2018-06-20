@@ -19,7 +19,7 @@ Log into vagrant using the command 'vagrant ssh'.
 
 To set up database,cd into the vagrant directory and use the command psql -d news -f newsdata.sql.
 
-Run base1.py script using command 'python newsdata.py'.
+Run newsdata.py script using command 'python newsdata.py'.
 
 This will outputs the popular views, popular articles, errors from the database.
 
