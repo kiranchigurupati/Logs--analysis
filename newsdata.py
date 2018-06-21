@@ -10,10 +10,14 @@ run_query3 = "On which days did more than 1% of requests lead to errors?\n"
 run_query1_ans = ("SELECT title, count(*) FROM articles JOIN log ",
                   "ON log.path LIKE concat('%',articles.slug,'%')",
                   "GROUP BY title, path ORDER BY count(*) DESC limit 3;")
-run_query2_ans = ("SELECT name, count(*) FROM authors JOIN articles ON ",
-                  "articles.author = authors.id JOIN log ON log.path ",
-                  "LIKE concat('%', articles.slug, '%') GROUP BY name,",
-                  "log.path ORDER BY count(*) DESC limit 3;")
+run_query2_ans = """select authors.name, count(*) as views\n
+                 from articles \n
+                 join authors\n
+                 on articles.author = authors.id \n
+                 join log \n
+                 on articles.slug = substring(log.path, 10)\n
+                 where log.status LIKE '200 OK'\n
+                 group by authors.name ORDER BY views DESC;"""
 run_query3_ans = ("SELECT date, perc FROM err_perc GROUP BY date,",
                   "perc HAVING perc >= 1 ORDER BY perc;")
 
